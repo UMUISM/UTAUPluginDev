@@ -13,7 +13,7 @@ namespace UTAUPluginDev
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new samplePlug());
+            Application.Run(new UTAUPluginDev());
         }
     }
 }

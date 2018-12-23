@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <lang name="original">
+    <p id="1">请作为插件或引擎使用方可显示</p>
+  </lang>
+  <lang name="en-US,en-GB,en-AU,en-CA">
+    <p id="1">synthesizing...</p>
+  </lang>
+  <lang name="jp,jp-JA">
+    <p id="1">を合成しています……</p>
+  </lang>
+</languages>

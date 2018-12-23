@@ -5,12 +5,18 @@ using System.Windows.Forms;
 
 namespace UTAUPluginDev
 {
-    public partial class samplePlug : Form
+    public partial class UTAUPluginDev : Form
     {
+        // 导入多语言
+        private static string rootDir = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
+
+        LangPack pack = new LangPack(rootDir + "lang.xml");
+       
+        // 基础设置
         private string[] args;
         private string path;
         private string tempPath;
-        private string ust = "请作为插件使用方可显示";
+        private string ust = "请作为插件或引擎使用方可显示";
         private string allUstFile = "请作为插件使用方可显示";
         private string batFilein = "请作为引擎使用方可显示";
         private string project;
@@ -18,7 +24,7 @@ namespace UTAUPluginDev
         private int psbarValue = 0;
         private string toolStripStatusLabel2Value = "分析中...";
 
-        public samplePlug()
+        public UTAUPluginDev()
         {
             InitializeComponent();
             args = Environment.GetCommandLineArgs();

@@ -1,6 +1,6 @@
 ﻿namespace UTAUPluginDev
 {
-    partial class samplePlug
+    partial class UTAUPluginDev
     {
         private System.ComponentModel.IContainer components = null;
         protected override void Dispose(bool disposing)
