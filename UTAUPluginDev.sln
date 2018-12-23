@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTAUPluginDev", "UTAUPluginDev\UTAUPluginDev.csproj", "{6CAF6648-87F3-44D9-9EC1-E561571BB1CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CAF6648-87F3-44D9-9EC1-E561571BB1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAF6648-87F3-44D9-9EC1-E561571BB1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAF6648-87F3-44D9-9EC1-E561571BB1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAF6648-87F3-44D9-9EC1-E561571BB1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A5621D7-FCBD-4E3B-8CED-93A2BBC0F478}
+	EndGlobalSection
+EndGlobal
