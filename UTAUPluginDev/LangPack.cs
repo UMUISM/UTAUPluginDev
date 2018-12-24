@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace UTAUPluginDev
 {
-    class LangPack
+    public class LangPack
     {
         private Dictionary<int, string> langData = new Dictionary<int, string>();
         private Dictionary<int, string> originLang;
@@ -13,10 +13,11 @@ namespace UTAUPluginDev
         private bool useLangFile = false;
         private string nowLangName = "";
 
-        public LangPack(string languageFile)
+        public LangPack(string languageFile,string lang)
         {
             conf.Load(languageFile);
-            nowLangName = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+
+            nowLangName = lang;
 
             loadConfig();
 

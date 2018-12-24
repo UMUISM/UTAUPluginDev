@@ -34,7 +34,6 @@
             this.保存合成用的BATToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存BAThelperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存ArgsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.打开UTAU临时文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -166,8 +165,7 @@
             // 文件ToolStripMenuItem
             // 
             this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.保存ToolStripMenuItem,
-            this.toolStripTextBox1});
+            this.保存ToolStripMenuItem});
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             this.文件ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.文件ToolStripMenuItem.Text = "文件";
@@ -180,8 +178,9 @@
             this.保存BAThelperToolStripMenuItem,
             this.保存ArgsToolStripMenuItem});
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.保存ToolStripMenuItem.Text = "保存";
+            this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 保存USTToolStripMenuItem
             // 
@@ -226,13 +225,6 @@
             this.保存ArgsToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.保存ArgsToolStripMenuItem.Text = "保存Args";
             this.保存ArgsToolStripMenuItem.Click += new System.EventHandler(this.保存ArgsToolStripMenuItem_Click);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.ReadOnly = true;
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
             // 
             // 打开UTAU临时文件夹ToolStripMenuItem
             // 
@@ -284,11 +276,11 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(721, 48);
+            this.textBox6.Location = new System.Drawing.Point(722, 48);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox6.Size = new System.Drawing.Size(360, 172);
+            this.textBox6.Size = new System.Drawing.Size(359, 172);
             this.textBox6.TabIndex = 12;
             // 
             // label6
@@ -300,7 +292,7 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "label6";
             // 
-            // samplePlug
+            // UTAUPluginDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -320,7 +312,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "samplePlug";
+            this.Name = "UTAUPluginDev";
             this.ShowIcon = false;
             this.Text = "参数输出";
             this.Load += new System.EventHandler(this.samplePlug_Load);
@@ -359,7 +351,6 @@
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开UTAU临时文件夹ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 如何使用ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
     }
