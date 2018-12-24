@@ -11,7 +11,7 @@ namespace UTAUPluginDev
         private static string rootDir = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
         public LangPack pack = new LangPack(rootDir + "lang.xml", "auto");
 
-        // 基础设置
+        // 基础设置：路径，字母
         private string[] args;
         private string path;
         private string tempPath;
@@ -20,6 +20,10 @@ namespace UTAUPluginDev
         private string batFilein = "请作为引擎使用方可显示";
         private string project;
         private string batHelper = "请作为引擎使用方可显示";
+        private string configFile = "请作为插件使用方可显示";
+        private string configPath;
+
+        // 进度条
         private int psbarValue = 0;
         private string toolStripStatusLabel2Value = "分析中...";
 
@@ -30,6 +34,13 @@ namespace UTAUPluginDev
             args = Environment.GetCommandLineArgs();
             if (args.Length == 2)
             {
+
+                configPath = args[0];
+
+                configPath = configPath.Substring(0, configPath.LastIndexOf("\\") - 21);
+                configPath = configPath + "setting.ini";
+
+                configFile = File.ReadAllText(configPath);
 
                 path = args[1];
                 ust = File.ReadAllText(path);
@@ -45,12 +56,10 @@ namespace UTAUPluginDev
                     while (i == 0)
                     {
                         strReadline = read.ReadLine();
-                        //MessageBox.Show(strReadline);
                         if (strReadline.Contains("Project=") == true)
                         {
                             project = strReadline.Substring(strReadline.IndexOf("=") + 1);
                             i = 1;
-                            //MessageBox.Show(project);
                         }
                         else
                         {
@@ -112,6 +121,7 @@ namespace UTAUPluginDev
             textBox3.Text = pack.fetch(allUstFile);
             textBox4.Text = pack.fetch(batFilein);
             textBox5.Text = pack.fetch(batHelper);
+            textBox6.Text = pack.fetch(configFile);
             toolStripProgressBar1.Value = psbarValue;
             toolStripStatusLabel2.Text = toolStripStatusLabel2Value;
 
@@ -133,6 +143,7 @@ namespace UTAUPluginDev
             关于ToolStripMenuItem.Text = pack.fetch("关于");
             如何使用ToolStripMenuItem.Text = pack.fetch("如何使用");
             Text = pack.fetch("参数输出");
+            label6.Text = pack.fetch("UTAU配置文件：");
 
         }
 
