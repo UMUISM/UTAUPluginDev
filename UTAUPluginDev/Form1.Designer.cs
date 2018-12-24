@@ -1,6 +1,6 @@
 ﻿namespace UTAUPluginDev
 {
-    partial class UTAUPluginDev
+    partial class MainForm
     {
         private System.ComponentModel.IContainer components = null;
         protected override void Dispose(bool disposing)
@@ -178,7 +178,7 @@
             this.保存BAThelperToolStripMenuItem,
             this.保存ArgsToolStripMenuItem});
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
@@ -292,7 +292,7 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "label6";
             // 
-            // UTAUPluginDev
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,8 +311,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "UTAUPluginDev";
+            this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "参数输出";
             this.Load += new System.EventHandler(this.samplePlug_Load);

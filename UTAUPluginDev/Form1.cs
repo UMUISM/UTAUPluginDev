@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace UTAUPluginDev
 {
-    public partial class UTAUPluginDev : Form
+    public partial class MainForm : Form
     {
         // 导入多语言
         private static string rootDir = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
-        public LangPack pack = new LangPack(rootDir + "lang.xml", "jp");
+        public LangPack pack = new LangPack(rootDir + "lang.xml", "auto");
 
         // 基础设置
         private string[] args;
@@ -23,7 +23,7 @@ namespace UTAUPluginDev
         private int psbarValue = 0;
         private string toolStripStatusLabel2Value = "分析中...";
 
-        public UTAUPluginDev()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -285,8 +285,6 @@ namespace UTAUPluginDev
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(pack.fetch("恭喜你发现了彩蛋，快去给程序员一个Star吧"));
-            //System.Diagnostics.Process.Start("https://github.com/740291272");
         }
     }
 }
