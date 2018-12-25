@@ -9,7 +9,7 @@ namespace UTAUPluginDev
     {
         // 导入多语言
         private static string rootDir = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
-        public LangPack pack = new LangPack(rootDir + "lang.xml", "auto");
+        public LangPack pack = new LangPack(rootDir + "lang.xml", "jp");
 
         // 基础设置：路径，字母
         private string[] args;
@@ -72,8 +72,9 @@ namespace UTAUPluginDev
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(pack.fetch("错误信息：") + e.Message);
-                    psbarValue = 0;
+                    MessageBox.Show(pack.fetch("错误了，可能是没有保存UST导致的！"), pack.fetch("警告"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox2.Text = pack.fetch("错误了，可能是没有保存UST导致的！") + e.Message;
+                    psbarValue = 50;
                 }
             }
             else
@@ -116,6 +117,7 @@ namespace UTAUPluginDev
 
         private void samplePlug_Load(object sender, EventArgs e)
         {
+
             textBox1.Lines = args;
             textBox2.Text =  pack.fetch(ust);
             textBox3.Text = pack.fetch(allUstFile);
@@ -130,6 +132,7 @@ namespace UTAUPluginDev
             label3.Text = pack.fetch("完整的UST");
             toolStripStatusLabel1.Text = pack.fetch("分析进度：");
             label4.Text = pack.fetch("合成用的BAT");
+            label7.Text = pack.fetch("编码转换");
             文件ToolStripMenuItem.Text = pack.fetch("文件");
             保存ToolStripMenuItem.Text = pack.fetch("保存");
             保存USTToolStripMenuItem.Text = pack.fetch("保存UST");

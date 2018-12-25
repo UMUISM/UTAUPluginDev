@@ -36,6 +36,8 @@
     <p id="33">参数输出</p>
     <p id="34">嘤嘤嘤</p>
     <p id="35">UTAU配置文件：</p>
+    <p id="36">错误了，可能是没有保存UST导致的！</p>
+    <p id="37">编码转换</p>
   </lang>
   <lang name="en-US,en-GB,en-AU,en-CA">
     <p id="1">Please use as a plugin to display</p>
@@ -73,6 +75,8 @@
     <p id="33">Parameter output</p>
     <p id="34">Warning</p>
     <p id="35">UTAU configuration file:</p>
+    <p id="36">Wrong, it may be caused by not saving UST!</p>
+    <p id="37">Coding conversion</p>
   </lang>
   <lang name="jp,jp-JA">
     <p id="1">表示するプラグインとして使用してください</p>
@@ -110,5 +114,7 @@
     <p id="33">パラメータ出力</p>
     <p id="34">警告する</p>
     <p id="35">UTAU設定ファイル：</p>
+    <p id="36">間違っている、それはUSTを保存していないことが原因である可能性があります。</p>
+    <p id="37">コード変換</p>
   </lang>
 </languages>

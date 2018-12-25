@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace UTAUPluginDev
@@ -15,15 +18,23 @@ namespace UTAUPluginDev
 
         public LangPack(string languageFile,string lang)
         {
-            conf.Load(languageFile);
-
-            nowLangName = lang;
-
-            loadConfig();
-
-            if (langData.Count != 0)
+            if(File.Exists(languageFile))
             {
-                useLangFile = true;
+                conf.Load(languageFile);
+
+                nowLangName = lang;
+
+                loadConfig();
+
+                if (langData.Count != 0)
+                {
+                    useLangFile = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("语言包文件：lang.xml找不到，请检查文件！\nLanguage package file: lang.xml can not be found, please check the file!\n言語パッケージファイル：lang.xmlが見つかりません。ファイルを確認してください。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Process.GetCurrentProcess().Kill();
             }
         }
 
